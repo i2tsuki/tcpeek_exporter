@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -eux
+
+cd $(dirname $0)
+ln -sfn ${PWD} ${GOPATH}/src/github.com/kizkoh/
+cd ${GOPATH}/src/github.com/kizkoh/tcpeek_exporter/
+go build .
